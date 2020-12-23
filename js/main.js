@@ -32,5 +32,8 @@ $(document).ready(function () {
     let iPin = $(this).attr("data-index");
     $('[data-index="'+ iPin +'"]').toggleClass('active');
   });
-
+  $(".modal input").on("click touchstart", function() {
+    $(this).focus();
+  });
+ 
 });

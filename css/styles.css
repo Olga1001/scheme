@@ -15,17 +15,12 @@
   max-height: 100vh;
   max-width: 1920px;
   overflow: hidden;
-
-  display: flex;
-  justify-content: center;
 }
 
 #panzoom {
   height: 100%;
   width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 #panzoom svg {
@@ -129,6 +124,7 @@
   font-weight: 500;
   cursor: pointer;
   text-align: left;
+  visibility: visible;
 }
 .modal_list-item:last-child {
   border-bottom: none;
@@ -144,6 +140,7 @@
   border-style: solid;
   border-width: 5px 0 5px 7px;
   border-color: transparent transparent transparent #c9fa5a;
+  pointer-events: none;
 }
 .modal_count {
   position: absolute;
@@ -186,37 +183,21 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; 
+  pointer-events: all;
 }
+
 .modal .btn {
   background: #f1e8e1;
   border-radius: 12px;
   white-space: nowrap;
-  padding: 0 10px;
   border: 1px solid #92a7b8;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
+  line-height: 18px;
+  font-size: 14px;
+  padding: 7px 12px;
 }
-/* .pins {
-  position: absolute;
-  left: 0;
-  top: 0; 
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-}
-.pin-item {
-  background:#D90000 url("../img/right-arrow.svg") no-repeat center / 60% ;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 99;
-} */
-.pin-item[data-index="1"]{
-  left: 39.5%;
-  top: 45.5%;
-}
+
 .modal[data-index="1"] {
   left: 26.5%;
   top: 40%;
@@ -293,10 +274,6 @@
 }
 
 @media only screen and (max-width: 1920px) {
-  /* .pin-item {
-    width: 2vw;
-    height: 2vw;
-  } */
   .modal {
     max-width: 14.58vw;
     padding: 2vw;
@@ -340,11 +317,14 @@
     padding: 0.36vw 0.625vw;
     margin-right: 0.52vw;
     min-width: 3.125vw;
+    border-width: 0.052vw;
   }
   .modal .btn {
     border-radius: 0.625vw;
-    padding: 0 0.52vw;
-    font-size: 0.83vw;
+    padding: 0.36vw 0.625vw;
+    line-height: 0.9vw;
+    font-size: 0.7vw;
+    border-width: 0.052vw;
   }
 }
 
