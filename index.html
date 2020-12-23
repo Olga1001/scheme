@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <section class="scheme">
+    <section class="scheme" id="scheme">
       <div id="panzoom">
         <!-- <div class="pins">
           <div class="pin-item" data-index="1"></div>
@@ -10166,10 +10166,11 @@
         </svg>
       </div>
       <div class="buttons">
-        <button class="zoom-btn zoom-out">-</button>
-        <input type="range" class="zoom-range">
-        <button class="zoom-btn zoom-in">+</button>
+        <button class="zoom-btn zoom-out" id="zoom-out" data-zoom-down>-</button>
+        <input type="range" class="zoom-range" id="zoom-range">
+        <button class="zoom-btn zoom-in" id="zoom-in" data-zoom-up>+</button>
       </div>
+    
     </section>
   
     <script src="js/jquery.min.js"></script>
