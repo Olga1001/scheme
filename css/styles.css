@@ -10,6 +10,13 @@
   box-sizing: border-box; 
 }
 
+body input:focus:required:invalid {
+  color: #191514; 
+}
+input:focus { 
+  color: #191514!important; 
+} 
+
 .scheme {
   position: relative;
   max-height: 100vh;
