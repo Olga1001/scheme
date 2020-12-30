@@ -30,13 +30,33 @@ $(document).ready(function () {
    
   }
 
+  // modals desktop
   $(".pin").hover(function () {
     let iPin = $(this).attr("data-index");
-    $('[data-index="'+ iPin +'"]').toggleClass('active');
+    console.log(iPin);
+    $('[data-index-modal="'+ iPin +'"]').toggleClass('active');
   });
-  $(".pin").bind('touchstart touchend', function (){
+
+  //modalsmobie
+  $(".pin").bind('touchstart', function (e){
+    e.stopPropagation();
     let iPin = $(this).attr("data-index");
-    $('[data-index="'+ iPin +'"]').toggleClass('active');
+    $('[data-index-modal="'+ iPin +'"]').addClass('active');
+  });
+  $(".pin").bind('touchend ', function (e){
+    e.stopPropagation();
+    let iPin = $(this).attr("data-index");
+    $('[data-index-modal="'+ iPin +'"]').removeClass('active');
+  });
+
+  // modal count mobile
+  $(".modal_list-item").bind('touchstart', function (e){
+    e.stopPropagation();
+    $(this).find(".modal_count").addClass('active');
+  });
+  $(".modal_list-item").bind('touchend ', function (e){
+    e.stopPropagation();
+    $(this).find(".modal_count").removeClass('active');
   });
 
   $(".modal_count input").on("click", function() {

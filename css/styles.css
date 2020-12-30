@@ -77,6 +77,7 @@ input:focus {
   cursor: pointer;
   z-index: 9;
 }
+
 .modal {
   position: absolute;
   max-width: 280px;
@@ -84,13 +85,11 @@ input:focus {
   z-index: 8;
   color: #ffffff;
   font-family: "FiraSans", sans-serif;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .modal.active, .modal:hover {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 .modal-container {
   background: linear-gradient(to bottom, #063f69, #1f97fb);
@@ -132,6 +131,11 @@ input:focus {
   cursor: pointer;
   text-align: left;
   visibility: visible;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: block;
 }
 .modal_list-item:last-child {
   border-bottom: none;
@@ -162,7 +166,7 @@ input:focus {
   opacity: 0;
   pointer-events: none;
 }
-.modal_list-item:hover .modal_count{
+.modal_list-item:hover .modal_count, .modal_list-item:focus .modal_count, .modal_list-item.active .modal_count{
   opacity: 1;
   pointer-events: auto;
 }
@@ -205,77 +209,77 @@ input:focus {
   padding: 7px 12px;
 }
 
-.modal[data-index="1"] {
+.modal[data-index-modal="1"] {
   left: 26.5%;
   top: 40%;
 }
 
-.modal[data-index="2"] {
+.modal[data-index-modal="2"] {
   left: 15.5%;
   bottom: 0%;
 }
 
-.modal[data-index="3"] {
+.modal[data-index-modal="3"] {
   left: 43.5%;
   top: 33%;
 }
-.modal[data-index="4"] {
+.modal[data-index-modal="4"] {
   left: 44.5%;
   top: 44%;
 }
-.modal[data-index="5"] {
+.modal[data-index-modal="5"] {
   left: 32.5%;
   top: 51%;
 }
-.modal[data-index="6"] {
+.modal[data-index-modal="6"] {
   left: 32%;
   top: 60%;
 }
-.modal[data-index="7"] {
+.modal[data-index-modal="7"] {
   left: 39%;
   top: 65%;
 }
-.modal[data-index="8"] {
+.modal[data-index-modal="8"] {
   left: 52.5%;
   top: 65%;
 }
-.modal[data-index="9"] {
+.modal[data-index-modal="9"] {
   left: 48%;
   top: 61%;
 }
-.modal[data-index="10"] {
+.modal[data-index-modal="10"] {
   left: 61%;
   top: 69%;
 }
-.modal[data-index="11"] {
+.modal[data-index-modal="11"] {
   left: 65.5%;
   top: 46%;
 }
-.modal[data-index="12"] {
+.modal[data-index-modal="12"] {
   right: 7%;
   top: 69%;
 }
-.modal[data-index="13"] {
+.modal[data-index-modal="13"] {
   right: 18.5%;
   top: 52%;
 }
-.modal[data-index="14"] {
+.modal[data-index-modal="14"] {
   right: 31.5%;
   top: 31%;
 }
-.modal[data-index="15"] {
+.modal[data-index-modal="15"] {
   right: 18%;
   top: 30%;
 }
-.modal[data-index="16"] {
+.modal[data-index-modal="16"] {
   right: 33%;
   top: 15%;
 }
-.modal[data-index="17"] {
+.modal[data-index-modal="17"] {
   right: 24.5%;
   top: 9%;
 }
-.modal[data-index="18"] {
+.modal[data-index-modal="18"] {
   right: 31%;
   top: 0;
 }
